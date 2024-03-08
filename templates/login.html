@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Burger Now WebApp</title>
+<style>
+    *{font-size:40px; font-family:Calibri;}
+    body{background-image:  url('static/Burger Now.jpg') ;
+    background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+    }
+    div{
+      margin-left: 15%;
+      margin-top: -4%;
+      scale: 0.8;
+    }
+       input {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(228, 177, 177);
+          border-radius: 10px;
+        }
+        h1 {
+text-shadow: 2px 2px 5px purple;
+font-size:45px;
+font-family:Cambria;
+color:rgb(225, 28, 14);
+}
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: rgb(231, 15, 15);
+        }
+        
+        .active {
+          background-color: #18b4ed;
+        }
+        input.btn1:hover:not(.active) {
+background-color: rgb(187, 106, 212);
+}
+input.btn1{
+background-color: rgb(151, 4, 95);
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: none;
+border-radius: 10px;
+float: center;
+
+}
+        a{color:white; text-decoration:None; font-family: Calibri;}
+        </style>
+        </head>
+        <body>
+        
+
+<center>
+  
+  <div><h1>Login Page</h1>
+  <h1><a href={{ url_for('signup') }}>If you are New Users, Click Here</a><br></h1>
+
+
+<form method="POST">
+<input type="text" name="un" placeholder="enter username"/>
+<br><br>
+<input type="password" name="pw" placeholder="enter password"/>
+<br><br>
+<input type="submit" value="Login" class="btn1"/>
+</form>
+{{ m }}
+
+</div>
+</center>
+</body>
+</html>

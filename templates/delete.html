@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>Burger Now WebApp</title>
+<style>
+h1 {
+text-shadow: 2px 2px 5px purple;
+font-size:45px;
+font-family:Cambria;
+color:rgb(225, 28, 14);
+}
+.nav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li , input.btn{
+float: left;
+}
+
+input.btn:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+input.btn{
+background-color: #333;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: none;
+}
+input[type=number],select{
+background-color:rgb(165, 238, 82);
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: 1;
+}
+
+.btn1{
+float:center;
+background-color:rgb(82, 105, 238);
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: 1;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+
+.btn1:hover:not(.active2) {
+background-color: rgb(192, 94, 171);
+}
+.active2 {
+background-color: #b02a6d;
+}
+.active {
+background-color: #18b4ed;
+}
+
+th {
+padding: none;
+margin-top: 15px;
+float: left;
+
+}
+td {
+border-spacing: 30px;
+padding: 20px;
+margin: auto;
+}
+table {
+
+text-align: center;
+}
+
+*{font-size:30px}
+body{background-color:lightblue;
+margin: 0}
+
+		#example3 {
+  border: 20px solid;
+  border-radius: 15px;
+  border-color: rgb(250, 250, 39);
+  padding: 10px;
+  width: 50%;
+  height: 50%;
+  box-shadow: 10px 15px black ;
+  background-color: aqua;
+}
+.y {
+			width: 20%;
+
+      margin-right: 50px;
+ 
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #fc2003;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+width: 20%;
+}
+
+.y:hover {background-color: #000000 ;
+
+}
+
+  *{ text-decoration: none; }
+.n:active {
+background-color: #43f528;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+		.n {
+			width: 20%;
+		}
+		.n{
+      margin-right: 50px;
+  }
+  *{ text-decoration: none; }
+  .n {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #2ae319;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+width: 20%;
+}
+
+.n:hover {background-color: #000000 ;
+
+}
+
+.n:active {
+background-color: #f5f528;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+        </style>
+        </head>
+        <body>
+        
+       <div class="nav"><li><a  href={{ url_for('home') }}>Home</a></li>
+
+          <li><a href={{ url_for('order') }}>Cart</a></li>
+
+<li><a href={{ url_for('burger_menu') }}>Menu</a></li>
+
+<li><a href={{ url_for('feedback') }}>FeedBack</a></li>
+          <form method="POST"><input type="submit" name="logout" value="Logout" class="btn"/>
+          </div>
+
+
+
+
+<center>
+
+	<h1> Are Sure to Want to Delete Account ?</h1><br><br>
+  <form method="POST">
+  <input type="submit" name="y" value="Yes" class="y" />
+  <input type="submit" name="n" value="No" class="n" /></form>
+  

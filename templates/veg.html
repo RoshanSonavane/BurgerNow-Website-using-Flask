@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>Burger Now Web App</title>
+<style>
+*{font-size:30px; font-family:Cambria;}
+body{background-color:rgb(165, 238, 82);}
+</style>
+</head>
+
+<head>
+<style>
+h1 {
+text-shadow: 2px 2px 5px purple;
+font-size:45px;
+font-family:Cambria;
+color:rgb(225, 28, 14);
+}
+div {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li , input.btn{
+float: left;
+}
+
+input.btn:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+input.btn{
+background-color: #333;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: none;
+}
+input[type=number],select{
+background-color:rgb(165, 238, 82);
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: 1;
+}
+
+.btn1{
+float:center;
+background-color:rgb(82, 105, 238);
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border-radius: 10px;
+border: 1;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+
+.btn1:hover:not(.active2) {
+background-color: rgb(227, 230, 37);
+}
+.active2 {
+background-color: #008538;
+}
+.active {
+background-color: #18b4ed;
+}
+
+th {
+padding: none;
+margin-top: 15px;
+
+
+}
+td {
+border-spacing: 40px;
+border-radius: 30px;
+padding: 20px;
+background-color: #fff;
+margin: auto;
+width: 50%;
+}
+table {
+border-spacing: 50px;
+text-align: center;
+}
+
+*{font-size:30px}
+		body {background-color:rgb(252, 168, 100);
+		margin: 0;}
+		.nav{
+			background-color:rgb(250, 250, 39);
+			border-radius: 5px;
+			margin-top: -10px;
+			margin-left: -8px;
+			margin-right: -8px;
+		
+		}
+		.nav a{color:black; text-decoration:None;margin:40px;}
+#example3 {
+  border: 20px solid;
+  border-radius: 15px;
+  border-color: rgb(250, 250, 39);
+  padding: 10px;
+  width: auto;
+scale:0.9;
+  box-shadow: 10px 15px black ;
+  background-color: rgb(62, 181, 62);
+  margin-top: -7%;
+}
+		.menu {
+			width: 10%;
+		}
+
+  *{ text-decoration: none; }
+  .menu {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #e0e319;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+width: 70%;
+}
+
+.menu:hover {background-color: #ff930f ;
+
+}
+
+.menu:active {
+background-color: #f5f528;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+
+<div><li><a  href={{ url_for('home') }}>Home</a></li>
+
+	<li><a href={{ url_for('order') }}>Cart</a></li>
+
+	<li><a href={{ url_for('burger_menu') }}>Menu</a></li>
+
+	<li><a href={{ url_for('feedback') }}>FeedBack</a></li>
+<form method="POST"><input type="submit" name="logout" value="Logout" class="btn"/></form>
+</div>
+<center>
+	<h1> Vegetarian Menu : </h1>
+	<h2><b>{{ m }}</b></h2>
+	<form method="post">
+<div id="example3">
+<table>
+<tr>
+	<th>
+		Classic Burgers
+	</th>
+	<th>
+		Whopper
+	</th>
+</tr>
+<tr>
+	<td>
+		<img src={{ url_for('static', filename='v4.jpeg') }} style="width:200px;height:150px;"><center>BK Veggie<br>Rs.95/-<input type="submit"  class="menu" name="v4" value="add to cart" /></center>
+</td>
+	</td>
+	<td>
+		<img src={{ url_for('static', filename='v1.jpeg') }} style="width:200px;height:150px;"><center>Veg Whopper<br>Rs.139/-<input type="submit"  class="menu" name="v1" value="add to cart" /></center>
+	</td>
+</tr>
+<tr>
+	<td>
+		<img src={{ url_for('static', filename='v5.jpeg') }} style="width:200px;height:150px;"><center>Veg Chilli Cheese Melt<br>Rs.119/-<input type="submit"  class="menu" name="v5" value="add to cart" /></center>
+</td>
+	
+	<td>
+		<img src={{ url_for('static', filename='v2.jpeg') }} style="width:200px;height:150px;"><center>Veg Masala Whopper<br>Rs.189/-<input type="submit"  class="menu" name="v2" value="add to cart" /></center>
+	</td>
+</tr>
+<tr>
+	<td>
+		<img src={{ url_for('static', filename='v6.jpeg') }} style="width:200px;height:150px;"><center>Paneer King's Melt<br>Rs.129/-<input type="submit"  class="menu" name="v6"  value="add to cart" /></center>
+</td>
+<td>
+	<img src={{ url_for('static', filename='v3.jpeg') }} style="width:200px;height:150px;"><center>Veg Double Whopper<br>Rs.199/-<input type="submit"  class="menu"  name="v3" value="add to cart" /></center>
+</td>
+
+</tr>
+<tr>
+	<td>
+		<img src={{ url_for('static', filename='v7.jpeg') }} style="width:200px;height:150px;"><center>Crispy Veg<br>Rs.55/-<input type="submit"  class="menu" name="v7" value="add to cart" /></center>
+</td></tr>
+
+
+</table>
+
+</div></form>
+</center></body></html>

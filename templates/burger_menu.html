@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Burger Now WebApp</title>
+<style>
+*{font-size:30px; font-family:Calibri;}
+.nav {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+li , input.btn{
+float: left;
+
+}
+
+input.btn:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+input.btn{
+background-color: #333;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border: none;
+}
+
+
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family:Cambria;
+font-size:30px;
+}
+
+li a:hover:not(.active) {
+background-color: rgb(231, 15, 15);
+}
+
+.active {
+background-color: #18b4ed;
+}
+
+
+h1 {
+text-shadow: 2px 2px 5px purple;
+font-size:45px;
+font-family:Cambria;
+color:rgb(225, 28, 14);
+}
+
+body {background-color:rgb(90, 198, 71);
+            margin: 0;}
+
+#example3 {
+  border: 20px solid;
+  border-radius: 15px;
+  border-color: rgb(200, 200, 38);
+  padding: 10px;
+  width: 50%;
+ font-family: cambria;
+  box-shadow: 10px 15px black ;
+  background-color: aqua;
+}
+		.menu {width: 20%;
+      margin-right: 50px;}
+  *{ text-decoration: none; }
+  .menu {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: rgb(3, 3, 3);
+background-color: rgb(250, 250, 39);
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+width: 70%;
+font-family: cambria;
+}
+
+.menu:hover {background-color: #ff930f ;
+
+}
+
+.menu:active {
+background-color: #f5f528;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+
+  <div class="nav"><li><a  href={{ url_for('home') }}>Home</a></li>
+    <li><a href={{ url_for('burger_menu') }}>Menu</a></li>
+      <li><a href={{ url_for('order') }}>Cart</a></li>
+      <li><a href={{ url_for('feedback') }}>FeedBack</a></li>
+
+
+<li><a href={{ url_for('delete') }}>Delete Account</a></li>
+      <form method="POST"><input type="submit" value="Logout" class="btn"/>
+      </div>
+<center>
+	<h1> Menu</h1>
+
+    <form method="post">
+    <div  id="example3">Select your Burger Type<br><br>
+        <a  href={{ url_for('veg') }}><input type="button" value="Veg Burger" class="menu" ></a><br><br>
+        <a  href={{ url_for('nveg') }}><input type="button" value="Non-Veg Burger" class="menu" ></a><br><br>
+        <a  href={{ url_for('bev') }}><input type="button" value="Beverages" class="menu" ></a><br><br>
+        <a  href={{ url_for('customer_menu') }}><input type="button" value="Create Your Own" class="menu" ></a><br><br>
+    </div>
+
+</form>
+
